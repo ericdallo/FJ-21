@@ -4,9 +4,9 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Ola Mundo Spring</title>
+<title>Ola</title>
 </head>
 <body>
-	<h2>Ola Mundo Spring MVC</h2>
+	OLA MUNDO!
 </body>
 </html>

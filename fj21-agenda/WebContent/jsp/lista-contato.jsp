@@ -23,7 +23,6 @@
 				
 			 	<c:forEach var="con" items="${lista}"> 
 				 <tr>
-				 	<br/>
 				 	<td>${con.nome}</td>
 				 	<td>
 				 	<c:choose>
