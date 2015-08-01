@@ -2,6 +2,7 @@ package br.com.caelum.tarefas.controller;
 
 import javax.servlet.http.HttpSession;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -11,6 +12,9 @@ import br.com.caelum.tarefas.modelo.Usuario;
 @Controller
 public class LoginController {
 	
+	@Autowired
+	private JdbcUsuarioDao dao;
+	
 	@RequestMapping("index")
 	public String index(){
 		return "tarefa/index";
@@ -19,7 +23,7 @@ public class LoginController {
 	
 	@RequestMapping("login")
 	public String login(Usuario u,HttpSession session){
-		if(new JdbcUsuarioDao().existeUsuario(u)){
+		if(dao.existeUsuario(u)){
 			session.setAttribute("loggedUser", u);
 			return "redirect:novaTarefa";
 		}
