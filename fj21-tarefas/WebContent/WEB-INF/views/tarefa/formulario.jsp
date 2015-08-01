@@ -15,6 +15,7 @@
 <title>Adicionar tarefa</title>
 </head>
 <body>
+	<a class="logout" href="logout">Sair</a>
 	<c:choose>
 		<c:when test="${param.st eq 1}">
 			<div>
