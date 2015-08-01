@@ -1,5 +1,7 @@
 package br.com.caelum.tarefas.controller;
 
+import javax.persistence.EntityManager;
+import javax.persistence.Persistence;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,7 +16,7 @@ public class LoginController {
 	
 	@Autowired
 	private JdbcUsuarioDao dao;
-	
+
 	@RequestMapping("index")
 	public String index(){
 		return "tarefa/index";

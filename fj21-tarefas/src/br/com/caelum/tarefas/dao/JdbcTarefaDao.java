@@ -17,7 +17,7 @@ import org.springframework.stereotype.Repository;
 import br.com.caelum.tarefas.modelo.Tarefa;
 
 @Repository
-public class JdbcTarefaDao {
+public class JdbcTarefaDao implements TarefaDao{
 	private final Connection connection;
 	
 	@Autowired
